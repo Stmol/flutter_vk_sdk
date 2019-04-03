@@ -1,0 +1,23 @@
+name: flutter_vk_sdk_example
+description: Demonstrates how to use the flutter_vk_sdk plugin.
+author: Yury Smidovich <y.smidovich@gmail.com>
+publish_to: 'none'
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  http: ^0.12.0+2
+
+  flutter_test:
+    sdk: flutter
+
+  flutter_vk_sdk:
+    path: ../
+
+flutter:
+  uses-material-design: true

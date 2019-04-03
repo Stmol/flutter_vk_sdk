@@ -1,0 +1,29 @@
+PODS:
+  - Flutter (1.0.0)
+  - flutter_vk_sdk (0.0.1):
+    - Flutter
+    - VK-ios-sdk (~> 1.4)
+  - VK-ios-sdk (1.4.6)
+
+DEPENDENCIES:
+  - Flutter (from `.symlinks/flutter/ios`)
+  - flutter_vk_sdk (from `.symlinks/plugins/flutter_vk_sdk/ios`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - VK-ios-sdk
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: ".symlinks/flutter/ios"
+  flutter_vk_sdk:
+    :path: ".symlinks/plugins/flutter_vk_sdk/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 58dd7d1b27887414a370fcccb9e645c08ffd7a6a
+  flutter_vk_sdk: 9bc16407e98371e63e15cb5ab5f92a1c4610a747
+  VK-ios-sdk: 7fd48bc5aaa6b96c3197c1987eb6593f2ea67331
+
+PODFILE CHECKSUM: ebd43b443038e611b86ede96e613bd6033c49497
+
+COCOAPODS: 1.6.1
