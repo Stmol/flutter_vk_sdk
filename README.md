@@ -12,19 +12,19 @@ A Flutter plugin for using the native iOS [VK SDK](https://github.com/VKCOM/vk-i
 ## Installation
 
 Add this to your package's pubspec.yaml file:
-```
+```yml
 dependencies:
   flutter_vk_sdk:
     git: git@github.com:Stmol/flutter_vk_sdk.git
 ```
 
 And then install it:
-```
+```bash
 flutter packages get
 ```
 
 Import lib in your Dart code:
-```
+```dart
 import 'package:flutter_vk_sdk/flutter_vk_sdk.dart';
 ```
 
@@ -33,7 +33,7 @@ After that, you need to [create VK App](https://vk.com/dev) and configure schema
 ## Simple example
 
 First, you should try to initialize SDK:
-```
+```dart
 import 'package:flutter_vk_sdk/flutter_vk_sdk.dart';
 
 const String APP_ID = '12345';
@@ -51,7 +51,7 @@ void main() async {
 ```
 
 Second, try to check if user is logged in alredy:
-```
+```dart
 final List<String> scopes = [
   VKPermission.FRIENDS,
   VKPermission.PHOTOS,
@@ -67,7 +67,7 @@ vkSdk.wakeUpSession(scopes).then((result) async {
 ```
 
 If they are not, handle any button tap and start an authorization flow:
-```
+```dart
 void onLoginButtonPressed() async {
   final isLoggedIn = await vkSdk.isLoggedIn();
   if (isLoggedIn) {
@@ -85,7 +85,7 @@ void onLoginButtonPressed() async {
 >_**tip: You probably should not using redirection to Safari. In that case your app may be rejected by Apple review team. To avoid redirection set argument `isSafariDisabled` to `true`**_
 
 Next, subscribe to one of a stream and listen a result of authorization:
-```
+```dart
 vkSdk.authorizationStateUpdated.listen((result) {
   if (result.state == VKAuthorizationState.Authorized) {
     print(result.token);
@@ -97,7 +97,7 @@ vkSdk.authorizationStateUpdated.listen((result) {
 You also can use SDK's streams in the `StreamBuilder` widget.
 
 Finally, you can use `http` Dart library to call VK API:
-```
+```dart
 final token = await vkSdk.accessToken();
 if (token == null || token.accessToken == null) {
   throw 'Access token is empty';
