@@ -50,7 +50,7 @@ void main() async {
 }
 ```
 
-Second, try to check if user is logged in alredy:
+Second, you should check if user is logged in alredy:
 ```dart
 final List<String> scopes = [
   VKPermission.FRIENDS,
@@ -60,7 +60,7 @@ final List<String> scopes = [
 
 vkSdk.wakeUpSession(scopes).then((result) async {
   if (result.state == VKAuthorizationState.Authorized) {
-    final accessToken = await widget.vkSdk.accessToken();
+    final accessToken = await vkSdk.accessToken();
     print(accessToken.localUser?.id);
   }
 });
