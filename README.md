@@ -75,7 +75,7 @@ void onLoginButtonPressed() async {
   }
 
   try {
-    await widget.vkSdk.authorize(scopes, isSafariDisabled: true);
+    await vkSdk.authorize(scopes, isSafariDisabled: true);
   } on VKSdkException catch (error) {
     print(error.message);
   }
