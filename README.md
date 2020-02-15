@@ -15,7 +15,9 @@ Add this to your package's pubspec.yaml file:
 ```yml
 dependencies:
   flutter_vk_sdk:
-    git: git@github.com:Stmol/flutter_vk_sdk.git
+    git:
+      url: git@github.com:Stmol/flutter_vk_sdk.git
+      ref: 0.1.1
 ```
 
 And then install it:
