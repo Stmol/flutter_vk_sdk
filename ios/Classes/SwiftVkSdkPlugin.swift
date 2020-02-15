@@ -62,9 +62,9 @@ public class SwiftVkSdkPlugin: NSObject, FlutterPlugin {
     }
 
     // iOS 9 workflow
-    public func application(_: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey: Any] = [:]) -> Bool {
+    public func application(_: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
         if #available(iOS 9.0, *) {
-            VKSdk.processOpen(url, fromApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String)
+            VKSdk.processOpen(url, fromApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String)
             return true
         }
 
